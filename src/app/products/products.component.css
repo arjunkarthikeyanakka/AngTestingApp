@@ -1,0 +1,10 @@
+li{
+    background-color: coral;
+}
+li a{
+    color:white
+}
+active{
+    background-color: goldenrod;
+    color: black;
+}

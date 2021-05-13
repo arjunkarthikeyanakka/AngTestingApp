@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -8,6 +9,5 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent {
 
   
-  indices=[1,1,1,1,1,1,1,1,1,1,1,1];
-
+  
 }

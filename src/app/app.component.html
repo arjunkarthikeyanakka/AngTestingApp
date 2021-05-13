@@ -1,13 +1,24 @@
-<div class="container">
-    <h1 class="text-white bg-dark display-3 text-center mx-auto">Products Management System</h1>
-</div>
-
-<!-- nest products component -->
-<div class="container">
-<app-products>Loading...</app-products>
-</div>
-
-<!-- nest footer component -->
-<div style="position: absolute; bottom:0px;width:100%" >
-<app-footer>Loading...</app-footer>
-</div>
+<div class="bg-warning text-dark">
+    <nav class="navbar navbar-expand-lg text-white p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand text-dark" href="#">
+            Trending accessories from all over the world
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse me-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto btn-group">
+              <a class="nav-link text-white btn btn-primary" routerLink="home">Home</a>
+              <a class="nav-link text-white btn btn-primary" routerLink="register">Register</a>
+              <a class="nav-link text-white btn btn-primary" routerLink="login">Login</a>
+              <a class="nav-link text-white btn btn-primary" routerLink="contactus">ContactUs</a>
+              <a class="nav-link text-white btn btn-primary" routerLink="products">Products</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    </div>
+    <div class="container m-4">
+        <router-outlet></router-outlet>
+    </div>

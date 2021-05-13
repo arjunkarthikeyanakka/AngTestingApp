@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { BikesComponent } from './bikes/bikes.component';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { CarsComponent } from './cars/cars.component';
 
 
 @NgModule({
@@ -13,7 +20,14 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppComponent,
     ProductsComponent,
     FooterComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ContactUsComponent,
+    RegisterComponent,
+    LoginComponent,
+    HomeComponent,
+    BikesComponent,
+    MobilesComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
