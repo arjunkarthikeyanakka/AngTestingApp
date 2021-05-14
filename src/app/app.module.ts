@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { CarsComponent } from './cars/cars.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CarsComponent } from './cars/cars.component';
     HomeComponent,
     BikesComponent,
     MobilesComponent,
-    CarsComponent
+    CarsComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
