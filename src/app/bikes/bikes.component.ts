@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BikeService } from '../bike.service';
 import { Product } from '../models/product.model';
+import { Observable, Subscriber } from 'rxjs';
+
 
 @Component({
   selector: 'app-bikes',
@@ -12,11 +14,17 @@ export class BikesComponent implements OnInit {
   bikes:Product[]=[];
 
   constructor(private dsObj:BikeService){
-    
   }
 
   ngOnInit(){
-    this.bikes=this.dsObj.getBikesData();  
+    this.dsObj.getBikesData().subscribe(
+      data=>{
+        this.bikes=data;
+      },
+      err=>{
+        console.log("error is ",err)
+      }
+    )  
   }
 
 

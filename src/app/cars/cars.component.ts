@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../car.service';
 import { Product } from '../models/product.model';
+import { Observable, Subscriber } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-cars',
@@ -16,7 +19,14 @@ export class CarsComponent implements OnInit  {
   }
 
   ngOnInit(){
-    this.cars=this.dsObj.getCarsData();  
+    this.dsObj.getCarsData().subscribe(
+      data=>{
+        this.cars=data;
+      },
+      err=>{
+        console.log("error is ",err);
+      }
+    ) 
   }
 
     

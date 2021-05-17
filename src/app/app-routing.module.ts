@@ -10,12 +10,16 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
+import { TestComponent } from './test/test.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'contactus',component:ContactUsComponent},
+  {path:'test',component:TestComponent},
+  {path:'user',component:UserComponent},
   {path:'products',component:ProductsComponent,children:[
     {path:'mobiles',component:MobilesComponent},
     {path:'bikes',component:BikesComponent},

@@ -1,0 +1,42 @@
+<style>
+    th,
+      td {
+        padding: 10px;
+        border: 5px solid white;
+        border-collapse: collapse;
+      }
+</style>
+<table class="table text-white text-center border border-5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th colspan="6">Address</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th colspan="3">Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let postObj of myPosts">
+            <td>{{postObj.id}}</td>
+            <td>{{postObj.name}}</td>
+            <td>{{postObj.username}}</td>
+            <td>{{postObj.email}}</td>
+            <td>Street:{{postObj.address.street}}</td>
+            <td>Suite:{{postObj.address.suite}}</td>
+            <td>city:{{postObj.address.city}}</td>
+            <td>zipcode:{{postObj.address.zipcode}}</td>
+            <td>latitude:{{postObj.address.geo.lat}}</td>
+            <td>latitude:{{postObj.address.geo.lng}}</td>
+            <td>{{postObj.phone}}</td>
+            <td>{{postObj.website}}</td>
+            
+            <td>Name : {{postObj.company.name}}</td>
+            <td>CatchPhrase :{{postObj.company.catchPhrase}}</td>
+            <td>bs : {{postObj.company.bs}}</td> 
+        </tr>
+    </tbody>
+</table>
