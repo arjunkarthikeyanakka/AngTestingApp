@@ -13,7 +13,7 @@ export class BikeService {
   constructor(private hc:HttpClient) { }
 
   getBikesData():Observable<Product[]>{  //always write return type since this is a ts file
-    return this.hc.get<Product[]>("assets/cars.json");
+    return this.hc.get<Product[]>("http://localhost:3000/bikes");
   };
   
 }

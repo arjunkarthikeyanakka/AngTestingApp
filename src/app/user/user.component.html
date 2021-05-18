@@ -1,50 +1,14 @@
-<h3 class="text-center text-white justify-content">Page : {{myUsers.page}} 
-Per_Page : {{myUsers.per_page}}  
-Total : {{myUsers.total}} 
-Total_Pages : {{myUsers.total_pages}} 
-<br>
-<br>
-<h3 class="text-white">Data: </h3>
-<hr>
-<style>
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-        border: 1px solid #ddd;
-        margin:auto;
-        table-layout: fixed;
-      }
-      
-      th, td {
-        padding: 5px;
-        color: white;
-        text-align: center;
-      }
-      
-      tr:nth-child(even){background-color: #f2f2f2}
-</style>
-<div style="overflow-x: auto;">
-<table class="table">
+<table class="table text-center text-dark m-3" style="font-weight: 600;font-size:20px">
     <!-- table headings -->
-    <thead style="background-color: goldenrod;">
+    <thead style="background-color: white;">
     <th>ID</th>
-    <th>Name</th>
-    <th>Year</th>
-    <th>Pantone_Value</th>
+    <th>Email-ID</th>
     </thead>
     <!-- table rows -->
     <tbody>
-        <tr *ngFor="let usObj of myUsers.data" [style.background-color]= "usObj.color" >
-            <td> {{usObj.id}} </td>
-            <td> {{usObj.name}} </td>
-            <td> {{usObj.year}} </td>
-            <td> {{usObj.pantone_value}} </td> 
+        <tr *ngFor="let userObj of myUsers">
+            <td><button class="btn btn-primary" (click)="onSelected(userObj.id)" >{{userObj.id}}</button></td>
+            <td>{{userObj.email}}</td>
         </tr>
     </tbody>
 </table>
-</div>
-<hr>
-<h3 class="text-white">Support</h3>
-<h3> {{myUsers.support.text}} </h3>
-<h3> Contribute to the community here : <a [href]=myUsers.support.url target="_blank">here</a></h3>

@@ -15,8 +15,13 @@ export class FakedataService {
     return this.hc.get<any[]>('https://jsonplaceholder.typicode.com/users')
   }
 
-  getUsers():Observable<any[]>{
-    return this.hc.get<any[]>("https://reqres.in/api/unknown")
+  getUsers():Observable<any>{
+    return this.hc.get<any>('http://localhost:3000/hall_of_fame')
   }
+
+  getUsersById(id):Observable<Users[]>{
+    return this.hc.get<Users[]>('http://localhost:3000/hall_of_fame/'+id);
+  }
+
 
 }

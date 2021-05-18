@@ -1,17 +1,14 @@
 export interface Users{
-    page:number,
-    per_page:number,
-    total:number,
-    total_pages:number,
-    data:{
-        id:number;
-        name:string;
-        year:number;
-        color:string;
-        pantone_value:string;
+    id:number,
+    email:string,
+    name:string,
+    profilePic:string,
+    address:{
+        street:string;
+        suite:string;
+        city:number;
+        zipcode:string;
     };
-    support:{
-        url:string;
-        text:string;
-    }
+    profession:string,
+    mobileno:string;
 }

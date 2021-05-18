@@ -1,0 +1,18 @@
+<div class="container m-1">
+    <div class="row row-cols">
+        <div class="col-6"></div>
+        <div class="col-4">
+            <div class="card mt-3 rounded box-shadow shadow" style="width: 28rem;">
+                <img class="w-100" style="height: 300px;" [src]="userdet.profilePic" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title text-center display-3 lead">{{userdet.id}}:{{userdet.name}}</h5>
+                <p class="card-text text-center lead">
+                    <h3>Profession : {{userdet.profession}}</h3>
+                    <h3>Email : <a href="">{{userdet.email}}</a></h3>
+                    <h3>Adress : {{userdet.address.street}} , {{userdet.address.suite}} , {{userdet.address.city}} , {{userdet.address.zipcode}}  </h3>
+                    <h3>Phone : {{userdet.mobileno}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

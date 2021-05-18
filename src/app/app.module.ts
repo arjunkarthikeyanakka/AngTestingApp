@@ -17,6 +17,7 @@ import { CarsComponent } from './cars/cars.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { TestComponent } from './test/test.component';
 import { UserComponent } from './user/user.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UserComponent } from './user/user.component';
     CarsComponent,
     PagenotfoundComponent,
     TestComponent,
-    UserComponent
+    UserComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
